@@ -1,0 +1,20 @@
+#URP's code
+
+import math
+
+p = float(input("Enter P: "))
+q = float(input("Enter Q: "))
+theta = float(input("Enter Theta: "))
+
+if p == 0 or q == 0 or theta == 0:
+    print("Error: One of the inputs is 0")
+else:
+    t = math.radians(theta)
+
+    numerator = p * math.sin(t)
+    denominator = q + (p * math.cos(t))
+
+    alpha = math.atan2(numerator, denominator)
+
+    print(f"Alpha is: {math.degrees(alpha):.2f}")
+    print(f"The angle formed by the force P: {theta-(math.degrees(alpha)):.2f}")
